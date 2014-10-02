@@ -1,0 +1,7 @@
+<li
+
+<% for key of @attributes(): %>
+	data-<%= key %>="<%= @[key] %>"
+<% end %>
+
+ class="list-group-item" data-id="<%= @id %>"><%= @Name %></li>

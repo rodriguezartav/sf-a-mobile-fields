@@ -1,0 +1,18 @@
+<span class="category-label" style=""><%= @label %></span>
+
+<% for key in @keys: %>
+	
+	<li class="list-group-item">
+		<strong><%= key  %></strong>
+
+		<% for fieldName in @data[key]: %>			
+			<div data-key="<%= key %>" data-name="<%= fieldName.Name %>" class="field-item"> - <%= fieldName.Label %> </div>
+
+		<% end %>
+
+
+	</li>
+
+<% end %>
+
+

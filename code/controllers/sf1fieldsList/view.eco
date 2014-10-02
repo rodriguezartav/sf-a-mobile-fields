@@ -1,0 +1,7 @@
+<div class="sliding-view">
+
+<span class="subtitle"><%= @label %></span>
+
+<ul class="list-group "></ul>
+
+</div>

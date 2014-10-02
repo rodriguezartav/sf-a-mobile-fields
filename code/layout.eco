@@ -1,0 +1,66 @@
+
+
+<div class="container">
+
+<div class="row app-header">
+	<h3>Salesforce1 Fields</h3><br/>
+	<h4 class="blue">Simply select a profile, and click on the fields you want to be displayed in Salesforce1 Mobile App</h4>
+</div>
+
+<div class="row">
+
+	<div class="col-md-3 dark-list list" >
+
+	<div class="row">
+		<div class="col-md-8">
+		<span class="title">Configured Profiles</span>
+
+		<span class="subtitle">List of Custom Profiles in SF1</span>
+	</div>
+	<div class="col-md-4">
+		<a class="btn btn-default btn-add-profile pull-right">Add Profile</a>
+</div>
+
+</div>
+		<div id="profile-list-controller"></div>
+
+		<div id="profile-controller"></div>
+
+
+	</div>
+
+	<div class="col-md-3 list" >
+
+		<span class="title">Salesforce Objects</span>
+
+		<span class="subtitle">select an object to display available fields</span>
+
+		<div id="objects-controller"></div>
+		
+	</div>
+
+
+	<div  class="col-md-3 list" >
+
+		<span class="title">Object Fields</span>
+
+		<span class="subtitle">selecting a field will add it to the current profile</span>
+
+		<div id="fields-controller"></div>
+		
+	</div>
+
+	<div class="col-md-3 list dark-list" >
+	
+		<span class="title">Fields visible in Salesforce1</span>
+		<span class="subtitle">click on any field to remove it, add them in the order they should appear</span>
+
+
+		<div id="sf1fields-controller"></div>
+		
+	</div>
+
+
+</div>
+
+</div>

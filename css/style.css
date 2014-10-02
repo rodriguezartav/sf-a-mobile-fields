@@ -1,0 +1,143 @@
+
+.btn-default{
+background: -moz-linear-gradient(#ffffff,#f1f1f1);
+background: -webkit-linear-gradient(#ffffff,#f1f1f1);
+background: -ms-linear-gradient(#ffffff,#f1f1f1);
+background: linear-gradient(#ffffff,#f1f1f1);
+}
+
+.blue{
+  color: #107abb;
+}
+
+.app-header{
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.title{
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.subtitle{
+  padding-top: 3px;
+  display: block;
+}
+
+.category-label{
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.list{
+  padding-top: 13px;
+}
+
+.dark-list{
+ background-color: #107abb;
+ background: -moz-linear-gradient(#2a93d5,#107abb);
+ background: -webkit-linear-gradient(#2a93d5,#107abb);
+ background: -ms-linear-gradient(#2a93d5,#107abb);
+ background: linear-gradient(#2a93d5,#107abb);
+
+}
+
+.dark-list .title, .dark-list .subtitle,.dark-list .category-label{
+  color: #fff;
+  letter-spacing: 1.1px;
+}
+
+.list .list-group{
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.list .list-group .list-group-item{
+  text-transform: capitalize;
+}
+
+
+.container{
+  width: 100% !important;
+}
+
+.header{
+  border-bottom: 1px solid #ddd;
+}
+
+.search-input{
+  width: 50%;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.main{
+	position: relative;
+  overflow-x: hidden;
+}
+
+.main > div {
+	-webkit-transition: left 1s; /* For Safari 3.1 to 6.0 */
+  transition: left 1s;
+
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
+	-webkit-transform: translateZ(0);
+}
+
+.sliding-view{
+  //padding: 10px 20px;
+}
+
+.sliding-view h1{
+  line-height: 40px;
+}
+
+
+.sliding-view h4{
+  line-height: 25px;
+}
+
+.list ul{
+	overflow-y: scroll;
+  margin: 0px;
+}		
+
+.list ul li{
+  cursor: pointer;
+  margin-left: 0px;
+}
+
+.field-item{
+  padding: 7px 2px;
+}
+
+.detail{
+	position: absolute;
+	left: 110%;
+	width: 100%;
+}
+
+.detail .field .title{
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 10px;
+}
+
+.detail .field .value{
+  font-size: 17px;
+  font-weight: 100;
+  line-height: 17px;
+}
+
