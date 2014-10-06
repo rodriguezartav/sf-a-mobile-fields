@@ -3,6 +3,7 @@ var SfObjectField = require("./code/models/sfobjectfield");
 var Profile = require("./code/models/profile");
 var Sf1Fields = require("./code/models/sf1fields");
 
+
 var container = document.getElementById("_3vot_sfafields");
 container.innerHTML = require("./code/layout")();
 
@@ -37,29 +38,41 @@ Profile.bind("SELECTED",function(profile){
 	sf1FieldsList.showForProfile();
 	profilesController.element.style.display = "none";
 	profilesList.element.style.display = "block";
+
 });
 
 SfObject.bind("SELECTED",function(item){
 	SfObjectField.destroyAll();
 	SfObjectField.fetch( item.Name, item.id );
 	sobjectFieldsController.loading();
+
 });
 
 SfObjectField.bind("SELECTED",function(item){
 	Sf1Fields.currentFields.addField(item);
 	Sf1Fields.currentFields.save();
 	sf1FieldsList.showForProfile();
+	
 });
 
 Sf1Fields.bind("SELECTED",function(item){
 	Sf1Fields.removeItem()
 });
 
+
+
+
 function onProfileItemClick(e){
-	e.target.classList.add("active")
 	profilesList.clearActive();
+	e.target.classList.add("active");
 	var target = e.target;
 	var id = target.dataset.threevot_apps__profileid__c;
+	var ObjFields = document.querySelectorAll(".third-module .list-group-item");
+	if (ObjFields.length > 0) {
+		for (i=0; i<= ObjFields.length -1; i++){
+			ObjFields[i].classList.remove("active")
+		}
+	};
 	if(!id) Profile.current = {Name: "ORGANIZATION"}
 	else Profile.current = Profile.find(id);
 	

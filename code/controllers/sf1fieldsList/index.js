@@ -20,7 +20,7 @@ function List(target, objectType, label){
 		that.onclick(e);
 	};
 
-	this.listItem.style.height = getScreenSize() - 100 + "px";
+	// this.listItem.style.height = getScreenSize() - 100 + "px";
 }
 
 List.prototype.showForProfile = function(){
@@ -58,12 +58,12 @@ List.prototype.removeField = function(e){
 	else this.showForProfile();
 }
 
-function getScreenSize(){
-	var w = window,
-    d = document,
-    e = d.documentElement,
-    g = d.getElementsByTagName('body')[0],
-    x = w.innerWidth || e.clientWidth || g.clientWidth,
-    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
-    return y;
-}
+// function getScreenSize(){
+// 	var w = window,
+//     d = document,
+//     e = d.documentElement,
+//     g = d.getElementsByTagName('body')[0],
+//     x = w.innerWidth || e.clientWidth || g.clientWidth,
+//     y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+//     return y;
+// }

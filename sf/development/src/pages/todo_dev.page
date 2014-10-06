@@ -1,0 +1,56 @@
+<apex:page sidebar="false" showheader="true" controller="ThreeVotApiController">
+
+	<head>
+		<!-- Meta, title, CSS, favicons, etc. -->
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+		<title> 3VOT TODO LIST DEMO - LESSION #1 </title>
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" type="text/css" href="//s3.amazonaws.com/dist.3vot.com/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="//localhost:3000/css/style.css"/>
+<script>window.clay = { path: "https://localhost:3000" }</script></head>
+
+	<div id="_3vot_todo" class="_3vot">
+
+		<!-- Page content of course! -->
+		<div class="heading" id="content" role="main">
+			<div class="container">
+				<p class="lead">Todo List Demo in Pure Javascript</p>
+			</div>
+		</div>
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-6 col-md-offset-3">
+
+					<div id="create-item-component">
+						
+						<input id="txt-create-item" type="text" class="form-control input-lg" placeholder="New Todo Item"/>
+
+						<a class="btn btn-primary pull-right btn-lg" id="btn-create-item">Create</a>
+
+					</div>
+
+					<ul id="todo-list-controller" class="list-group">
+	
+					</ul>
+
+				</div>
+
+			<div class="col-md-3">
+				<div id="info-box-controller"/>
+			</div>
+
+
+			</div>
+		</div>
+	</div>
+
+	<script src="//localhost:3000/index.js"/>
+  
+</apex:page>

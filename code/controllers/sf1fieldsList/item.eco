@@ -1,18 +1,11 @@
-<span class="category-label" style=""><%= @label %></span>
-
+<div class="list-label"><%= @label %></div>
 <% for key in @keys: %>
-	
 	<li class="list-group-item">
-		<strong><%= key  %></strong>
-
+		<%= key  %>
 		<% for fieldName in @data[key]: %>			
-			<div data-key="<%= key %>" data-name="<%= fieldName.Name %>" class="field-item"> - <%= fieldName.Label %> </div>
-
+			<div data-key="<%= key %>" data-name="<%= fieldName.Name %>" class="field-item"> - <%= fieldName.Label %> <span class="icon icon-remove"></span></div>
 		<% end %>
-
-
 	</li>
-
 <% end %>
 
 

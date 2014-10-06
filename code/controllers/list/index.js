@@ -17,7 +17,7 @@ function List(target, objectType, onclick){
 		that.onclick(e);
 	};
 
-	this.listItem.style.height = getScreenSize() - 100 + "px";
+	// this.listItem.style.height = getScreenSize() - 100 + "px";
 
 	this.objectType.bind("refresh destroy", function(){
 		that.render();
@@ -43,7 +43,18 @@ List.prototype.render = function(){
 		itemsHtml += Item(item);
 	};
 	this.listItem.innerHTML = itemsHtml;
+
+	this.activeFirst();
 }
+
+List.prototype.activeFirst = function(){
+	if (this.element.id === "profile-list-controller"){
+		var firstProfile = this.element.querySelectorAll(".list-group-item")[0];
+		console.log(firstProfile);
+		firstProfile.classList.add("active");
+	}
+}
+
 
 List.prototype.clearActive = function(){
 	var items = this.element.querySelectorAll("li");
@@ -55,19 +66,19 @@ List.prototype.clearActive = function(){
 
 List.prototype.onclick = function(e){
 	this.clearActive();
-	e.target.classList.add("active")
+	e.target.classList.add("active");
 	var id = e.target.dataset.id;
 	var item = this.objectType.find(id);
 
 	this.objectType.trigger("SELECTED", item);
 }
 
-function getScreenSize(){
-	var w = window,
-    d = document,
-    e = d.documentElement,
-    g = d.getElementsByTagName('body')[0],
-    x = w.innerWidth || e.clientWidth || g.clientWidth,
-    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
-    return y;
-}
+// function getScreenSize(){
+// 	var w = window,
+//     d = document,
+//     e = d.documentElement,
+//     g = d.getElementsByTagName('body')[0],
+//     x = w.innerWidth || e.clientWidth || g.clientWidth,
+//     y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+//     return y;
+// }
