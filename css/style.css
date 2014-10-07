@@ -2,11 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
 /*General*/
-body {
+#_3vot_sfafields {
   font-family: 'Open Sans', sans-serif!important;
-  font-size: 16px;
-  font-weight: 300;
-  
 }
 ._3vot {
   -webkit-transform: scale(1.015);
@@ -252,17 +249,17 @@ header {
 
 /*Media Queries*/
 @media (max-width:2000px){
-  body {
+  #_3vot_sfafields {
     font-size: 20px;
   }
 }
 @media (max-width:1500px){
-  body {
+  #_3vot_sfafields {
     font-size: 16px;
   }
 }
 @media (max-width:1200px){
-  body {
+  #_3vot_sfafields {
     font-size: 12px;
   }
 }
