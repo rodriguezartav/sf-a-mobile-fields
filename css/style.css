@@ -142,9 +142,9 @@
 ._3vot .list .list-group .list-group-item .name,
 ._3vot .list .list-group .list-group-item .name {
   display: inline-block;
-  overflow: hidden;
-  width: 85%;
-  pointer-events:none;
+  overflow-x: hidden;
+  width: 90%;
+  pointer-events: none;
 }
 
 
@@ -180,28 +180,15 @@
   border-top: 6px solid #FF9017;
 }
 
-
-/*._3vot .list-group-item.active, 
-._3vot .list-group-item.active:hover, 
-._3vot .list-group-item.active:focus {
-  color: #fff;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  border: none;
-  z-index: 3;
-}*/
-
 /*Columns*/
-.controller-container {
+._3vot .controller-container {
   position: relative;
 }
 
-#sf1fields-controller{
+._3vot #sf1fields-controller{
   position: relative;
   overflow: hidden;
 }
-
 
 ._3vot #profile-list-controller .list-group-item.active, 
 ._3vot #profile-list-controller .list-group-item.active:hover, 
