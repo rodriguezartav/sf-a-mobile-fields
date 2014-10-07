@@ -20,7 +20,7 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
-			<div id="profile-list-controller"></div>
+			<div id="profile-list-controller" class="controller-container"></div>
 			<div id="profile-controller"></div>
 		</div><!-- //Row -->
 		
@@ -34,7 +34,7 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
-			<div id="objects-controller"></div>
+			<div id="objects-controller" class="controller-container"></div>
 		</div>
 	</div><!-- //Column -->
 
@@ -45,7 +45,7 @@
 					<h3>Add an Object Field</h3><br>
 				</div>
 			</div>
-			<div id="fields-controller"></div>
+			<div id="fields-controller" class="controller-container"></div>
 		</div>
 	</div><!-- // Column -->
 
@@ -58,7 +58,7 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
-			<div id="sf1fields-controller"></div>
+			<div id="sf1fields-controller" class="controller-container"></div>
 		</div>
 	</div><!-- //Column-->
 
