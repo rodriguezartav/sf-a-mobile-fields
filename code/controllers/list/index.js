@@ -56,9 +56,9 @@ List.prototype.activeFirst = function(){
 }
 
 List.prototype.addedFieldNotification = function(){
-		console.log("mmhmm");
 		var alertContainer = document.createElement("div"),
 			sf1FieldsContainer = document.getElementById("sf1fields-controller");
+			
 		alertContainer.classList.add("success-alert");
 		alertContainer.innerHTML = "Field Added!";
 		sf1FieldsContainer.appendChild(alertContainer)
@@ -85,6 +85,7 @@ List.prototype.clearActive = function(){
 
 List.prototype.onclick = function(e){
 	this.clearActive();
+	console.log(this.element.id);
 	if (this.element.id === "fields-controller"){
 		this.addedFieldNotification();
 	}
