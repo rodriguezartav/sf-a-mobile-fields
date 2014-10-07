@@ -50,7 +50,7 @@ List.prototype.render = function(){
 List.prototype.activeFirst = function(){
 	if (this.element.id === "profile-list-controller"){
 		var firstProfile = this.element.querySelectorAll(".list-group-item")[0];
-		console.log(firstProfile);
+		if(!firstProfile) return false;
 		firstProfile.classList.add("active");
 	}
 }

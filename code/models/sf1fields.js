@@ -1,9 +1,13 @@
 var _3Model = require("3vot-model")
+var Ajax = require("3vot-model/lib/3vot-model-vfr");
 
-Sf1Fields = _3Model.Model.setup("threevot_apps__Sf1Fields__c", ["id","Name","threevot_apps__data__c","threevot_apps__profileid__c"]);
+
+Sf1Fields = _3Model.setup("threevot_apps__Sf1Fields__c", ["id","Name","threevot_apps__data__c","threevot_apps__profileid__c"]);
+Sf1Fields.ajax = Ajax;
+Sf1Fields.ajax.namespace = "threevot_apps.";
 
 Sf1Fields.fetch = function(){
-	Sf1Fields.query("select id, name, profileid__c, data__c from threevot_apps__Sf1Fields__c", { fail: function(err){ console.log(err) } });
+	Sf1Fields.query("select id, name, profileid__c, data__c from threevot_apps__Sf1Fields__c")
 }
 
 Sf1Fields.prototype.getData = function(){

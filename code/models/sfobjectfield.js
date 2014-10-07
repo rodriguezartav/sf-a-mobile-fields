@@ -1,8 +1,8 @@
-var _3Model = require("3vot-model/lib/ajaxless")
+var _3Model = require("3vot-model")
 
 var fields = ["Label","Name","Type", "objectName","objectId"]; 
 
-var SfObjectField = _3Model.Model.setup("SfObjectField", fields);
+var SfObjectField = _3Model.setup("SfObjectField", fields);
 
 SfObjectField.fetch = function(objectName, objectId){
 
