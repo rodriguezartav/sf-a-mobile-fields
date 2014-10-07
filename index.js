@@ -29,7 +29,6 @@ document.querySelector(".btn-add-profile").onclick = function(){
 }
 
 Sf1Fields.bind("refresh",function(){
-	console.log(Sf1Fields.all())
 	sf1FieldsList.showForProfile();
 })
 
