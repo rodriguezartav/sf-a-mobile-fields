@@ -5,5 +5,7 @@
 <% end %>
 
  class="list-group-item" data-id="<%= @id %>">
- <span class="name"><%= @Name %></span> 
- <span class="icon"></span></li>
+ 	<span class="name"><%= @Name %></span> 
+ 	<span class="icon"></span>
+
+ </li>

@@ -55,26 +55,6 @@ List.prototype.activeFirst = function(){
 	}
 }
 
-List.prototype.addedFieldNotification = function(){
-		var alertContainer = document.createElement("div"),
-			sf1FieldsContainer = document.getElementById("sf1fields-controller");
-			
-		alertContainer.classList.add("success-alert");
-		alertContainer.innerHTML = "Field Added!";
-		sf1FieldsContainer.appendChild(alertContainer)
-		
-		setTimeout(function() {
-			alertContainer.classList.add("show");
-		}, 100);
-		setTimeout(function() {
-			alertContainer.classList.remove("show");
-		}, 2000);
-		setTimeout(function() {
-			alertContainer.remove();
-		}, 2500);
-
-}
-
 List.prototype.clearActive = function(){
 	var items = this.element.querySelectorAll("li");
 	for (var i = items.length - 1; i >= 0; i--) {
@@ -85,13 +65,10 @@ List.prototype.clearActive = function(){
 
 List.prototype.onclick = function(e){
 	this.clearActive();
-	console.log(this.element.id);
-	if (this.element.id === "fields-controller"){
-		this.addedFieldNotification();
-	}
-	
-	e.target.classList.add("active");
-	var id = e.target.dataset.id;
+	var target = e.target;
+	while( !target.classList || !target.classList.contains("list-group-item")) target = target.parentNode;
+	target.classList.add("active");
+	var id = target.dataset.id;
 	var item = this.objectType.find(id);
 
 	this.objectType.trigger("SELECTED", item);
