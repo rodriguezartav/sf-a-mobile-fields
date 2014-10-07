@@ -61,11 +61,18 @@ List.prototype.addedFieldNotification = function(){
 			sf1FieldsContainer = document.getElementById("sf1fields-controller");
 		alertContainer.classList.add("success-alert");
 		alertContainer.innerHTML = "Field Added!";
-		alertContainer.classList.add("show");
 		sf1FieldsContainer.appendChild(alertContainer)
-		// setTimeout(function() {
-		// 	alertContainer.remove();
-		// }, 2000);
+		
+		setTimeout(function() {
+			alertContainer.classList.add("show");
+		}, 100);
+		setTimeout(function() {
+			alertContainer.classList.remove("show");
+		}, 2000);
+		setTimeout(function() {
+			alertContainer.remove();
+		}, 2500);
+
 }
 
 List.prototype.clearActive = function(){
