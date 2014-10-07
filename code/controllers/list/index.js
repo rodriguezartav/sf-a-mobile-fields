@@ -55,6 +55,18 @@ List.prototype.activeFirst = function(){
 	}
 }
 
+List.prototype.addedFieldNotification = function(){
+		console.log("mmhmm");
+		var alertContainer = document.createElement("div"),
+			sf1FieldsContainer = document.getElementById("sf1fields-controller");
+		alertContainer.classList.add("success-alert");
+		alertContainer.innerHTML = "Field Added!";
+		alertContainer.classList.add("show");
+		sf1FieldsContainer.appendChild(alertContainer)
+		// setTimeout(function() {
+		// 	alertContainer.remove();
+		// }, 2000);
+}
 
 List.prototype.clearActive = function(){
 	var items = this.element.querySelectorAll("li");
@@ -66,6 +78,10 @@ List.prototype.clearActive = function(){
 
 List.prototype.onclick = function(e){
 	this.clearActive();
+	if (this.element.id === "fields-controller"){
+		this.addedFieldNotification();
+	}
+	
 	e.target.classList.add("active");
 	var id = e.target.dataset.id;
 	var item = this.objectType.find(id);

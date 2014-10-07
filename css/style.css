@@ -39,8 +39,21 @@ header {
   font-weight: 300;
   margin: 0;
   font-size: 2.5em;
-  display: inline-block;
+  display:block;
   text-shadow: 1px 2px 1px rgba(0,0,0,.2);
+}
+._3vot header h1 .by3vot {
+  background-image: url(../images/by3vot.png);
+  width: 130px;
+  height: 41px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+  display: inline-block;
+  opacity: .8;
+  margin: 0 0 0 .2em;
+  background-position: center center;
 }
 ._3vot header h2 {
   font-size: .8em;
@@ -95,7 +108,7 @@ header {
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
   cursor:pointer;
-  padding: 1em;
+  padding: .8em;
   position: relative;
 }
 ._3vot .list-group-item .field-item {
@@ -124,6 +137,16 @@ header {
   -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.2);
   box-shadow: 0 1px 6px rgba(0,0,0,.2);
 }
+
+._3vot .list.first-module .list-group .list-group-item .name,
+._3vot .list.second-module .list-group .list-group-item .name {
+  display: inline-block;
+  overflow: hidden;
+  width: 85%;
+  pointer-events:none;
+}
+
+
 ._3vot .list-header{
   height: 5em;
   padding: 1.5em .5em;
@@ -168,6 +191,11 @@ header {
   color: #fff;
 }
 
+/*Column*/
+#sf1fields-controller{
+  position: relative;
+}
+
 /*Icons*/
 ._3vot .list .list-group .list-group-item .icon{
   display: inline-block;
@@ -199,6 +227,25 @@ header {
   background-image: url(../images/icon-check.png);
 }
 
+
+/*Alerts*/
+.success-alert{
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  width: 100%;
+  padding: 1em;
+  background-color: #4d4d4d;
+  color: #fff;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.success-alert.show{
+  opacity: 1;
+}
 
 
 /*Media Queries*/

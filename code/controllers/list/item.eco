@@ -4,4 +4,6 @@
 	data-<%= key %>="<%= @[key] %>"
 <% end %>
 
- class="list-group-item" data-id="<%= @id %>"><%= @Name %> <span class="icon"></span></li>
+ class="list-group-item" data-id="<%= @id %>">
+ <span class="name"><%= @Name %></span> 
+ <span class="icon"></span></li>

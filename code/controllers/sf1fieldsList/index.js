@@ -44,8 +44,15 @@ List.prototype.showForProfile = function(){
 	this.listItem.scrollTop = currentScrollPosition;
 }
 
+// List.prototype.addedFieldNotification = function(){
+// 	if (this.element.id === "fields-controller"){
+// 		console.log("wiii")
+// 	}
+// }
+
 List.prototype.onclick = function(e){
 	var target = e.target;
+	addedFieldNotification();
 	if(target.classList.contains("field-item")) return this.removeField(e);
 }
 
